@@ -7,7 +7,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
 
-@FeignClient(name = "giphy", url = "${giphy.url}")
+@FeignClient(name = "giphy", url = "${giphy.url}",
+        fallback = GiphyClientImpl.class)
 public interface GiphyClient {
 
     @RequestMapping(method = RequestMethod.GET,value = "/random?api_key=${giphy.api_key}&rating=${giphy.rating}")
