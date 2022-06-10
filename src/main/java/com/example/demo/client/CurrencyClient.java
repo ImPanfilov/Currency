@@ -10,6 +10,7 @@ import java.util.Map;
 
 @FeignClient(name = "currency", url = "${currency.url}",
         fallback = CurrencyClientImpl.class)
+
 public interface CurrencyClient {
 
     @RequestMapping(method = RequestMethod.GET,value = "/latest.json?app_id=${currency.app_id}&base=${currency.base}")
