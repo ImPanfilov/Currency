@@ -66,7 +66,6 @@ public class CurrencyClientTest {
         assertEquals("Bitcoin",((String)currencies.getBody().get("BTC")));
         assertEquals(0.000032070798,currrencyLast.getRates().get("BTC"));
         assertEquals(0.000031889174,currrencyPast.getRates().get("BTC"));
-
     }
 
     private String read(String location) throws IOException {
