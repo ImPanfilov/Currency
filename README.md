@@ -15,6 +15,8 @@ http://localhost:8080/compare/BTC
 Сборка и запуск Docker контейнера:
 
 gradlew build  
+
 docker build . --tag currency  
+
 docker run -p 8080:8080 currency  
 
