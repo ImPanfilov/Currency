@@ -1,19 +1,19 @@
 package com.example.demo.controller;
 
 import com.example.demo.services.GiphyService;
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import java.io.IOException;
 
 @RestController
+@RequiredArgsConstructor
 public class CurrencyController {
 
-    @Autowired
-    private GiphyService giphyService;
+    private final GiphyService giphyService;
 
     @GetMapping(path = "/compare/{symbols}")
-    public ResponseEntity<?> getGiphy(@PathVariable("symbols") String symbols) throws IOException {
+    public ResponseEntity<?> getGiphy(@PathVariable("symbols") String symbols) {
 
         return giphyService.getGiphy(symbols);
     }
