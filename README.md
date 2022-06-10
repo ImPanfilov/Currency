@@ -1,4 +1,5 @@
 # Сurrency Comparison Application
+Cервис, который обращается к сервису курсов валют, и отображает gif по условию.
 
 Для локального запуска:  
 gradlew bootrun
