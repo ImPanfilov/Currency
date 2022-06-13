@@ -1,4 +1,4 @@
-package com.example.demo.exceptions;
+package com.impanfilov.alpha.exceptions;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Getter;

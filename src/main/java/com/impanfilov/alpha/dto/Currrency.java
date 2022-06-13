@@ -1,10 +1,10 @@
-package com.example.demo.dto;
+package com.impanfilov.alpha.dto;
 
 import lombok.Data;
 import java.util.Map;
 
 @Data
-public class CurrrencyDto {
+public class Currrency {
     String disclaimer;
     String license;
     long timestamp;

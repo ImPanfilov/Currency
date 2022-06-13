@@ -1,4 +1,4 @@
-package com.example.demo.client;
+package com.impanfilov.alpha.client;
 
 import com.github.tomakehurst.wiremock.matching.MatchResult;
 import org.apache.commons.io.IOUtils;

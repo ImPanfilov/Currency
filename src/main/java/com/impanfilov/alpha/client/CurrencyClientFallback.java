@@ -1,21 +1,21 @@
-package com.example.demo.client;
+package com.impanfilov.alpha.client;
 
-import com.example.demo.dto.CurrrencyDto;
+import com.impanfilov.alpha.dto.Currrency;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Component;
 
 import java.util.Map;
 
 @Component
-public class CurrencyClientImpl implements CurrencyClient{
+public class CurrencyClientFallback implements CurrencyClient{
 
     @Override
-    public CurrrencyDto currentRate() {
+    public Currrency currentRate() {
         return null;
     }
 
     @Override
-    public CurrrencyDto pastRate(String string) {
+    public Currrency pastRate(String string) {
         return null;
     }
 

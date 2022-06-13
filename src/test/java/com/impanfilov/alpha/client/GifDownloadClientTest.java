@@ -1,4 +1,4 @@
-package com.example.demo.client;
+package com.impanfilov.alpha.client;
 
 import com.github.tomakehurst.wiremock.matching.MatchResult;
 import org.apache.commons.io.IOUtils;
@@ -18,10 +18,10 @@ import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 @ActiveProfiles("test")
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 @AutoConfigureWireMock(port = 8081)
-public class GifGetClientTest {
+public class GifDownloadClientTest {
 
     @Autowired
-    GifGetClient gifGetClient;
+    GifDownloadClient gifDownloadClient;
 
     @Test
     public void getGif_RichOrBroke() throws Exception {
@@ -44,8 +44,8 @@ public class GifGetClientTest {
         byte[] rich = read("stubs/rich.gif");
         byte[] broke = read("stubs/broke.gif");
 
-        assertArrayEquals(rich,gifGetClient.downloadByUrl("rich").getBody());
-        assertArrayEquals(broke,gifGetClient.downloadByUrl("broke").getBody());
+        assertArrayEquals(rich, gifDownloadClient.downloadByUrl("rich").getBody());
+        assertArrayEquals(broke, gifDownloadClient.downloadByUrl("broke").getBody());
 
     }
 

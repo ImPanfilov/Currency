@@ -1,6 +1,6 @@
-package com.example.demo.controller;
+package com.impanfilov.alpha.controller;
 
-import com.example.demo.services.GiphyService;
+import com.impanfilov.alpha.services.GiphyService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -11,8 +11,8 @@ public class CurrencyController {
 
     private final GiphyService giphyService;
 
-    @GetMapping(path = "/compare/{symbols}")
-    public ResponseEntity<?> getGiphy(@PathVariable("symbols") String symbols) {
+    @GetMapping(path = "/compare/{currencyCode}")
+    public ResponseEntity<?> getGiphy(@PathVariable("currencyCode") String symbols) {
 
         return giphyService.getGiphy(symbols);
     }

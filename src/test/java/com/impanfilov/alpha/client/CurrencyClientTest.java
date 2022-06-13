@@ -1,6 +1,6 @@
-package com.example.demo.client;
+package com.impanfilov.alpha.client;
 
-import com.example.demo.dto.CurrrencyDto;
+import com.impanfilov.alpha.dto.Currrency;
 import com.github.tomakehurst.wiremock.matching.MatchResult;
 import org.apache.commons.io.IOUtils;
 import org.junit.jupiter.api.Test;
@@ -54,8 +54,8 @@ public class CurrencyClientTest {
 
 
         ResponseEntity<Map<String, String>> currencies = currencyClient.currencies();
-        CurrrencyDto currrencyPast = currencyClient.pastRate(LocalDate.now().format(DateTimeFormatter.ISO_DATE));
-        CurrrencyDto currrencyLast = currencyClient.currentRate();
+        Currrency currrencyPast = currencyClient.pastRate(LocalDate.now().format(DateTimeFormatter.ISO_DATE));
+        Currrency currrencyLast = currencyClient.currentRate();
 
 
         //выборочные тесты на дату 2022-06-07

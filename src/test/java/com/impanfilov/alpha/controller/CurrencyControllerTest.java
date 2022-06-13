@@ -1,6 +1,6 @@
-package com.example.demo.controller;
+package com.impanfilov.alpha.controller;
 
-import com.example.demo.services.GiphyService;
+import com.impanfilov.alpha.services.GiphyService;
 import com.github.tomakehurst.wiremock.matching.MatchResult;
 import org.apache.commons.io.IOUtils;
 import org.junit.jupiter.api.Test;
@@ -85,10 +85,12 @@ public class CurrencyControllerTest {
 
         //выборочные тесты на дату 2022-06-07
         assertArrayEquals(rich,(byte[])giphyService.getGiphy("RUB").getBody());//   latest "RUB": 61.749995        past "RUB": 61.374999
-        assertArrayEquals(broke,(byte[])giphyService.getGiphy("EUR").getBody());//  latest "EUR": 0.934819         past "EUR": 0.935482
-        assertArrayEquals(rich,(byte[])giphyService.getGiphy("CNY").getBody());//   latest  "CNY": 6.6707          past "CNY": 6.6539
+        assertArrayEquals(rich,(byte[])giphyService.getGiphy("CNY").getBody());//   latest "CNY": 6.6707           past "CNY": 6.6539
         assertArrayEquals(rich,(byte[])giphyService.getGiphy("BTC").getBody());//   latest "BTC": 0.000032070798   past "BTC": 0.000031889174
 
+        assertArrayEquals(broke,(byte[])giphyService.getGiphy("EUR").getBody());//  latest "EUR": 0.934819         past "EUR": 0.935482
+        assertArrayEquals(broke,(byte[])giphyService.getGiphy("CAD").getBody());//  latest "CAD": 1.253715         past "CAD": 1.258257
+        assertArrayEquals(broke,(byte[])giphyService.getGiphy("GBP").getBody());//  latest "GBP": 0.794439         past "GBP": 0.798494
     }
 
     private byte[] read(String location) throws IOException {

@@ -1,6 +1,6 @@
-package com.example.demo;
+package com.impanfilov.alpha;
 
-import com.example.demo.controller.CurrencyController;
+import com.impanfilov.alpha.controller.CurrencyController;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;

@@ -1,4 +1,4 @@
-package com.example.demo.exceptions;
+package com.impanfilov.alpha.exceptions;
 
 import feign.FeignException;
 import org.springframework.http.HttpStatus;
