@@ -24,7 +24,7 @@ import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 public class CurrencyControllerTest {
 
     @Autowired
-    private GiphyService giphyService;
+    GiphyService giphyService;
 
     @Test
     public void controllerRichOrBroke() throws Exception {
