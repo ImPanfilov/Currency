@@ -1,16 +1,16 @@
 package com.impanfilov.alpha.services;
 
 import com.impanfilov.alpha.client.CurrencyClient;
-import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
 @Service
-@RequiredArgsConstructor
 public class CurrencyService{
 
-    private final CurrencyClient currencyClient;
+    @Autowired
+    CurrencyClient currencyClient;
 
     public String checkRate(String currencyCode){
         Double currRate = currencyClient.currentRate().getRates().get(currencyCode);

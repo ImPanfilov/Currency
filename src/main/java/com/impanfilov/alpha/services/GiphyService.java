@@ -3,21 +3,24 @@ package com.impanfilov.alpha.services;
 import com.impanfilov.alpha.client.CurrencyClient;
 import com.impanfilov.alpha.client.GifDownloadClient;
 import com.impanfilov.alpha.client.GiphyClient;
-import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 @Service
-@RequiredArgsConstructor
 public class GiphyService{
 
-    private final GiphyClient giphyClient;
+    @Autowired
+    GiphyClient giphyClient;
 
-    private final GifDownloadClient gifDownloadClient;
+    @Autowired
+    GifDownloadClient gifDownloadClient;
 
-    private final CurrencyService currencyService;
+    @Autowired
+    CurrencyService currencyService;
 
-    private final CurrencyClient currencyClient;
+    @Autowired
+    CurrencyClient currencyClient;
 
     public ResponseEntity<?> getGiphy(String currencyCode) {
         String tag = currencyService.checkRate(currencyCode);
